@@ -1,0 +1,406 @@
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, 
+section, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td {
+    background: transparent;
+    border: 0;
+    font-size: 100%;
+    margin: 0;
+    outline: 0;
+    padding: 0;
+    vertical-align: baseline;
+}
+a {
+    color: #e7a104;
+    font-weight: bold;
+    text-decoration: none;
+}
+header {
+    position: relative;
+    z-index: 10;
+}
+p {line-height: 1.6em;}
+textarea.ui-input-text {
+    height: 150px;
+    resize: none;
+}
+ul {list-style: inside none;}
+#scribble {border: 1px solid #ddd;}
+.content {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: transparent !important;
+    min-height: 100%;
+    position: relative;
+}
+    .content .title {
+        display: block;
+        margin-bottom: 10px;
+    }
+        .content dl dd {margin: 0 0 20px 0;}
+        .content dl dd:last-child {margin-bottom: 0;}
+        .content .note-block .note {
+            display: block;
+            width: 100%;
+            font-size: 1em;
+            margin: 10px 0;
+        }
+        .content .note-block .plate {
+            width: 18%;
+            background: url(../images/small_plate.png) no-repeat;
+            background-size: 100%;
+            margin-right: 2%;
+            color: #000;
+            text-align: center;
+            padding: .4em 0 .7em 0;
+        }
+        .content .note-block .plate-info {width: 80%;}
+        .content .note-block .report {
+            cursor: pointer;
+            float: right;
+            color: #fff;
+            white-space: nowrap;
+        }
+            .content .note-block .report img {
+                vertical-align: top;
+                width: 18%;
+            }
+        .content .note-block .more {
+            text-align: center;
+            background: none;
+        }
+            .content .note-block .more .button {margin: 0 auto;}
+        .content .note-block li {
+            margin-bottom: 10px;
+            padding: 10px;
+            display: block;
+            overflow: hidden;
+            background-color: rgba(0,0,0,.5);
+            border-radius: .6em;
+            font-size: .9em;
+        }
+.light {
+    font-style: italic;
+    color: #bbb;
+}
+.info {
+    padding: 2% 1% 3% 0;
+    background-color: rgba(0,0,0,.5);
+    margin-bottom: 20px;
+    border-radius: .6em;
+    font-size: .9em;
+    overflow: visible;
+}
+.info-text {padding: 2% 3%;}
+    .info img {
+        width: 25%;
+        margin-right: 2%;
+        margin-left: -2%;
+    }
+    .info p {width: 70%;}
+    .info-text p {width: 100%;}
+    .info a {
+        padding: 2px;
+        border-radius: .5em;
+        display: inline-block;
+        text-decoration: none;
+        background-color: #fff;
+        margin: 10px 10px 0 0;
+    }
+    #about .info a {
+        padding: 0;
+        border-radius: 0;
+        display: inline;
+        background-color: transparent;
+        margin: 0;
+    }
+        .info a span {
+            display: inline-block;
+            padding: 1px 6px;
+            background-color: #338bcc;
+            border-radius: .4em;
+            color: #fff;
+            font-weight: bold;
+        }
+        .info strong {font-weight: bold;}
+.column-left {
+    display: inline;
+    float: left;
+}
+.column-right {
+    display: inline;
+    float: right;
+}
+.clear {clear: both;}
+    .ui-body-d .ui-link {
+        color: #e7a104 !important;
+        font-weight: bold;
+    }
+    .ui-body-d .ui-link:hover {
+        color: #e7a104;
+        text-decoration: underline;
+    }
+.ui-btn {margin: .5em 5px .5em 0;}
+.ui-icon {background-color: #21354b;}
+.ui-content {padding: 30px 0 0 0 !important;}
+#about .content {padding: 30px 8px 0 8px !important;}
+.ui-collapsible-content {
+    padding: 10px 12px 10px 10px;
+    border: none;
+    margin: 0;
+    background-color: rgba(0,0,0,0.5);
+    text-shadow: none;
+}
+    .ui-collapsible-content .color {
+        display: inline-block;
+        height: 30px;
+        width: 30px;
+        margin-right: 15px;
+        border-radius: 5px;
+    }
+    .ui-collapsible-content .color-selected {
+        height: 16px;
+        width: 16px;
+        margin-bottom: 7px;
+    }
+    .ui-collapsible-content .clear-scribble {
+        display: inline-block;
+        float: right;
+        font-size: 20px;
+        margin-top: 7px;
+    }
+    .ui-select .ui-btn {
+        border: none !important;
+        background: none;
+    }
+    .ui-select .ui-btn-corner-all {border-radius: .6em;}
+    .ui-select .ui-btn-inner {
+        background-color: transparent;
+        background-image: -webkit-gradient(linear, left top, left bottom, from(#ebe2da), to(#85827d)); /* Saf4+, Chrome */
+        background-image: -webkit-linear-gradient(top, #ebe2da, #85827d); /* Chrome 10+, Saf5.1+ */
+        background-image:    -moz-linear-gradient(top, #ebe2da, #85827d); /* FF3.6 */
+        background-image:     -ms-linear-gradient(top, #ebe2da, #85827d); /* IE10 */
+        background-image:      -o-linear-gradient(top, #ebe2da, #85827d); /* Opera 11.10+ */
+        background-image:         linear-gradient(top, #ebe2da, #85827d);
+    }
+    .ui-select .ui-btn-text {text-align: left;}
+.ui-collapsible-heading {margin: 0;}
+    .ui-collapsible-heading .ui-btn {border: none;}
+    .draw .ui-btn-inner {
+        background-image: -webkit-gradient(linear, left top, left bottom, from(#ebe2da), to(#b9b3ac)); /* Saf4+, Chrome */
+        background-image: -webkit-linear-gradient(top, #ebe2da, #b9b3ac); /* Chrome 10+, Saf5.1+ */
+        background-image:    -moz-linear-gradient(top, #ebe2da, #b9b3ac); /* FF3.6 */
+        background-image:     -ms-linear-gradient(top, #ebe2da, #b9b3ac); /* IE10 */
+        background-image:      -o-linear-gradient(top, #ebe2da, #b9b3ac); /* Opera 11.10+ */
+        background-image:         linear-gradient(top, #ebe2da, #b9b3ac);
+    }
+.write {
+    border-top: 1px solid #444;
+    margin-top: 1px;
+}
+    .write .ui-btn-inner {
+        border-top: none;
+        background-image: -webkit-gradient(linear, left top, left bottom, from(#b9b3ac), to(#85827d)); /* Saf4+, Chrome */
+        background-image: -webkit-linear-gradient(top, #b9b3ac, #85827d); /* Chrome 10+, Saf5.1+ */
+        background-image:    -moz-linear-gradient(top, #b9b3ac, #85827d); /* FF3.6 */
+        background-image:     -ms-linear-gradient(top, #b9b3ac, #85827d); /* IE10 */
+        background-image:      -o-linear-gradient(top, #b9b3ac, #85827d); /* Opera 11.10+ */
+        background-image:         linear-gradient(top, #b9b3ac, #85827d);
+    }
+    .ui-content .ui-btn-inner {
+        border-top: none;
+        text-shadow: none;
+        font-weight: normal;
+        color: #000;
+    }
+.ui-input-text {
+    -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2) inset !important;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2) inset !important;
+    outline: none;
+}
+input.ui-input-text {
+    opacity: .8;
+    background: #ebe2da;
+    font-size: 20px;
+    width: 40%;
+    margin-top: 7px;
+}
+.ui-mobile-viewport {background-color: #ccc;}
+.ui-page {
+    max-width: 640px;
+    margin: auto;
+    border: 1px solid #444 !important;
+    background: #338bcc !important;
+    min-height: 0 !important;
+}
+.ui-footer {
+    font-size: .8em;
+    text-align: center;
+    height: 10%;
+    border: none;
+    overflow: hidden;
+    padding: 2.5% 0;
+    position: relative;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#0d1d24), to(#333333)); /* Saf4+, Chrome */
+    background-image: -webkit-linear-gradient(top, #0d1d24, #333333); /* Chrome 10+, Saf5.1+ */
+    background-image:    -moz-linear-gradient(top, #0d1d24, #333333); /* FF3.6 */
+    background-image:     -ms-linear-gradient(top, #0d1d24, #333333); /* IE10 */
+    background-image:      -o-linear-gradient(top, #0d1d24, #333333); /* Opera 11.10+ */
+    background-image:         linear-gradient(top, #0d1d24, #333333);
+}
+    .ui-footer .blue-gradient {
+        height: 30%;
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(51,139,204,.3)), to(rgba(51,139,204,0))); /* Saf4+, Chrome */
+        background-image: -webkit-linear-gradient(top, rgba(51,139,204,.3), rgba(51,139,204,0)); /* Chrome 10+, Saf5.1+ */
+        background-image:    -moz-linear-gradient(top, rgba(51,139,204,.3), rgba(51,139,204,0)); /* FF3.6 */
+        background-image:     -ms-linear-gradient(top, rgba(51,139,204,.3), rgba(51,139,204,0)); /* IE10 */
+        background-image:      -o-linear-gradient(top, rgba(51,139,204,.3), rgba(51,139,204,0)); /* Opera 11.10+ */
+        background-image:         linear-gradient(top, rgba(51,139,204,.3), rgba(51,139,204,0));
+    }
+.ui-header {
+    border: none;
+    overflow: hidden;
+    background: #338bcc;
+}
+    .ui-header .top {
+    	overflow: hidden;
+        padding-bottom: 10px;
+		position: relative;
+        background-image: -webkit-gradient(linear, left top, left bottom, from(#333333), to(#0d1d24)); /* Saf4+, Chrome */
+        background-image: -webkit-linear-gradient(top, #333333, #0d1d24); /* Chrome 10+, Saf5.1+ */
+        background-image:    -moz-linear-gradient(top, #333333, #0d1d24); /* FF3.6 */
+        background-image:     -ms-linear-gradient(top, #333333, #0d1d24); /* IE10 */
+        background-image:      -o-linear-gradient(top, #333333, #0d1d24); /* Opera 11.10+ */
+        background-image:         linear-gradient(top, #333333, #0d1d24);
+    }
+        .ui-header .top img {
+            margin: 1em 0 1em .3em;
+            width: 65%;
+        }
+		.ui-header .top .blue-gradient {
+			height: 20%;
+			width: 100%;
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(51,139,204,0)), to(rgba(51,139,204,.3))); /* Saf4+, Chrome */
+			background-image: -webkit-linear-gradient(top, rgba(51,139,204,0), rgba(51,139,204,.3)); /* Chrome 10+, Saf5.1+ */
+			background-image:    -moz-linear-gradient(top, rgba(51,139,204,0), rgba(51,139,204,.3)); /* FF3.6 */
+			background-image:     -ms-linear-gradient(top, rgba(51,139,204,0), rgba(51,139,204,.3)); /* IE10 */
+			background-image:      -o-linear-gradient(top, rgba(51,139,204,0), rgba(51,139,204,.3)); /* Opera 11.10+ */
+			background-image:         linear-gradient(top, rgba(51,139,204,0), rgba(51,139,204,.3));
+		}
+    .ui-navbar .ui-btn {
+        border: none;
+        color: #c7c7c7;
+        text-shadow: none;
+        height: 20%;
+        border-left: 1px solid rgba(255, 255, 255, 0.44);
+        background-image: -webkit-gradient(linear, left top, left bottom, from(#338bcc), to(#203248));
+        background-image: -webkit-linear-gradient(top, #338bcc, #203248);
+        background-image:    -moz-linear-gradient(top, #338bcc, #203248);
+        background-image:     -ms-linear-gradient(top, #338bcc, #203248);
+        background-image:      -o-linear-gradient(top, #338bcc, #203248);
+        background-image:         linear-gradient(top, #338bcc, #203248);
+    }
+
+    .ui-navbar .ui-btn:hover {color: #fff;}
+	.ui-navbar .active {
+		height: 100%;
+		position: relative;
+		top: -5px;
+		background-image: none;
+		background-color: #338bcc;
+		color: #fff;
+		border: none;
+		z-index: 500;
+	}
+	.ui-navbar .no-border, .ui-navbar .ui-block-a .ui-btn {border: none;}
+	.ui-navbar .ui-btn-inner {
+		border: none;
+		white-space: nowrap;
+		padding-left: 2px;
+		padding-right: 2px;
+	}
+    .ui-navbar, .ui-navbar .ui-grid-b {overflow: visible;}
+    .ui-navbar .ui-btn-text {
+        font-size: 1.1em;
+        font-weight: bold;
+    }
+        .ui-navbar .ui-btn-text img {
+            vertical-align: middle;
+            margin-right: 5px;
+            width: 26%;
+        }
+.ui-content {
+    /*For some reason the background will not show up if it isn't an image. We need it to be a solid color*/
+    background: url(../images/content_bg.jpg) top left no-repeat;
+    background-size: 100%;
+    max-width: none;
+    color: #fff;
+    text-shadow: none;
+    margin-top: 20px;
+}
+p.ui-content {
+    color: #fff;
+    padding: 10px !important;
+    text-shadow: none;
+}
+    .ui-content dl {
+        padding: 0 8px 20px 8px;
+        min-height: 270px;
+    }
+        .ui-content dl dt label {font-weight: bold;}
+        .ui-content dl dt .light {color: #fff;}
+.button {
+    border-radius: .5em;
+    background: #fff;
+    display: block;
+    width: 55%;
+    height: 30%;
+    text-align: center;
+    padding: 1%;
+    margin-bottom: 10%;
+}
+    .button input {
+        background-image: -webkit-gradient(linear, left top, left bottom, from(#e7a104), to(#805815)); /* Saf4+, Chrome */
+        background-image: -webkit-linear-gradient(top, #e7a104, #805815); /* Chrome 10+, Saf5.1+ */
+        background-image:    -moz-linear-gradient(top, #e7a104, #805815); /* FF3.6 */
+        background-image:     -ms-linear-gradient(top, #e7a104, #805815); /* IE10 */
+        background-image:      -o-linear-gradient(top, #e7a104, #805815); /* Opera 11.10+ */
+        background-image:         linear-gradient(top, #e7a104, #805815);
+        font-size: 1em;
+        color: #fff;
+        border-radius: .3em;
+        border: none;
+        display: block;
+        width: 100%;
+        height: 100%;
+        padding: 5%;
+        cursor: pointer;
+    }
+/*Media Query to target larger devices*/
+@media all and (min-width: 641px) {
+        .info img {
+            width: 15%;
+            margin-left: -1%;
+        }
+        .info p {width: 80%;}
+        .info-text p {width: 100%;}
+    .content .note-block .plate {
+        padding-top: .7em;
+        width: 10%;
+    }
+    .ui-page {position: relative !important;}
+    .ui-select {width: 44%;}
+    .ui-header .top img {width: auto;}
+    .ui-navbar .ui-btn-text {
+        font-size: 1.5em;
+        font-weight: bold;
+    }
+        .ui-navbar .ui-btn-text img {width: auto;}
+}

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Sifat Kubus</title>
+	<link rel="stylesheet" href="../css/themes/default/jquery.mobile-1.4.5.min.css">
+	<link rel="stylesheet" href="swipe-page.css">
+	<link rel="shortcut icon" href="../icon.png">
+	<script src="phonegap.js"></script>
+	<script src="../js/jquery.js"></script>
+	<script src="../js/jquery.mobile-1.4.5.min.js"></script>
+	<script src="swipe-page.js"></script>
+    <style>
+    	img {
+			max-width:100%;
+			height:auto;}
+    </style>
+</head>
+<body>
+
+<div id="header" data-role="header" data-id="header" data-position="fixed" data-fullscreen="true" data-tap-toggle="false">
+    <h1>Memiliki 6 Sisi Yang Sama</h1>
+	<a id="playClip01" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-icon-back ui-btn-icon-left ui-btn-icon-notext">Back</a>
+    <a href="../index.html" data-ajax="false" data-direction="reverse" data-icon="home" data-iconpos="notext" data-shadow="false" data-icon-shadow="false">Back</a>
+</div><!-- /header -->
+
+<div data-role="page" id="newyork" class="demo-page" data-title="Sisi Kubus" data-dom-cache="true" data-theme="b" data-next="buenosaires">
+
+	<div role="main" class="ui-content">
+		<br/><br/>
+		<div id="ui-body-test" class="ui-body ui-body-a ui-corner-all" style="margin:1em;">
+		<p>Kubus memiliki 6 buah sisi yang ukurannya sama panjang<br/>
+		<center><img src="sisi.gif"/></center>
+		</p>
+		
+		</div>
+		
+	</div><!-- /content -->
+
+</div><!-- /page -->
+
+    <div id="footer" data-id="footer" data-position="fixed" data-fullscreen="true" data-tap-toggle="false">
+		<div data-role="controlgroup" class="control ui-btn-left" data-type="horizontal" data-mini="true">
+        	<a href="#" class="prev ui-btn ui-btn-icon-notext ui-icon-carat-l">Previous</a>
+        	<a href="#" class="next ui-btn ui-btn-icon-notext ui-icon-carat-r">Next</a>
+        </div>
+
+    </div><!-- /footer -->
+
+</body>
+</html>

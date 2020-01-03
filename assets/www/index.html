@@ -1,0 +1,75 @@
+﻿
+<!DOCTYPE html> 
+<html lang='en' manifest="leftanote.appcache">
+	
+<head> 
+        <title>MathDroid</title> 
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+        <meta charset="UTF-8"/>
+		<link rel="shortcut icon" href="icon.png">
+		<link rel="icon" type="image/png" href="favicon.png"/>
+        <link rel="apple-touch-icon" href="assets/images/left-a-note-app-icon.png"/>
+        <link rel="stylesheet" href="assets/css/jquery.mobile-1.0.min.css"/>
+		<link rel="stylesheet" href="assets/css/style.css"/>
+		<script type="text/javascript" src="js/sound.js"></script>
+		<script type="text/javascript" src="assets/js/jquery-1.6.4.min.js"></script>
+		<script type="text/javascript" src="assets/js/jquery.jqscribble.js"></script>
+        <script type="text/javascript" src="assets/js/jpeg_encoder_basic.js"></script>
+        <script type="text/javascript" src="assets/js/jquery.mobile-1.0.min.js"></script>
+        <script type="text/javascript" src="assets/js/jqm.page.params.js"></script>
+		<script src="phonegap.js"></script>
+	<script type="text/javascript">
+		function onLoad()
+		{
+      		document.addEventListener("deviceready", onDeviceReady, true);
+		}
+		function showConfirm() {
+    		navigator.notification.confirm(
+       			'Yakin ingin keluar ?', 
+       		exitFromApp,              
+      			'Exit',            
+       			'Cancel,OK'         
+    		);
+ 		}
+  
+		function exitFromApp(buttonIndex) {
+    		if (buttonIndex==2){
+     			navigator.app.exitApp();
+    		}
+ 		}
+	</script>
+	<bgsound src="audio/click.mp3" />
+	</head>
+   <body onLoad="onload()">
+
+   <section data-role="page" data-theme="d" id="addnote">
+            <header data-role="header">
+				<div class="top">
+					<img src="assets/images/logo.png" alt="MathDroid" class="column-left"/>
+					<div class="#38c-gradient"></div>
+				</div>
+			</header>
+            <form class="content" data-role="content">
+				<dl>
+					 <dt class="info">
+					<br>
+						<center>
+						<a id="playClip01" href="materi.html" target="_self" style="width:200px;"><span style="color:white; font-size:20px; spacing:3px; padding:4px; background:linear-gradient(180deg, #ccc, #38c, #40c);;min-height:100%;width:90%;">Konten/Materi</span></a><br><br>
+						<a id="playClip01" href="quiz.html" target="_self" style="width:200px;"><span style="color:white; font-size:20px; spacing:3px; padding:4px; background:linear-gradient(180deg, #ccc, #38c, #40c);;min-height:100%;width:90%;">Latihan</span></a><br><br>
+						<a id="playClip01" href="help.html" target="_self" style="width:200px;"><span style="color:white; font-size:20px; spacing:3px; padding:4px; background:linear-gradient(180deg, #ccc, #38c, #40c);;min-height:100%;width:90%;">Bantuan</span></a><br><br>
+						<a onclick='showConfirm()' style="width:200px;"><span style="color:white; font-size:20px; spacing:3px; padding:4px; background:linear-gradient(180deg, #ccc, #38c, #40c);;min-height:100%;width:90%;">Keluar</span></a><br>
+						
+						<br>&nbsp;<br><br>
+						</center>
+						<p class="column-left"><img src="assets/images/cube.png" alt="" class="column-left"/></p>
+					</dt>
+                </dl>				
+            </form>
+			<br>&nbsp;<br>
+			<footer data-role="footer">
+				<div class="#38c-gradient"></div>
+				<span>MathDroid &copy; 2016 <br>&middot; Ima Rohimah &middot; UIN SGD Bandung &middot;</span>
+			</footer>
+        </section>
+   </body>
+</html>

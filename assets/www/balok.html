@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Belajar Bangun Ruang</title>
+	<link rel="stylesheet" href="css/themes/default/jquery.mobile-1.4.5.min.css">
+	<link rel="shortcut icon" href="icon.png">
+	<script src="js/jquery.js"></script>
+	<script src="js/sound.js"></script>
+	<script src="js/jquery.mobile-1.4.5.min.js"></script>
+	<script src="phonegap.js"></script>
+	<script type="text/javascript">
+		function onLoad()
+		{
+      		document.addEventListener("deviceready", onDeviceReady, true);
+		}
+		function showConfirm() {
+    		navigator.notification.confirm(
+       			'Yakin ingin keluar ?', 
+       		exitFromApp,              
+      			'Exit',            
+       			'Cancel,OK'         
+    		);
+ 		}
+  
+		function exitFromApp(buttonIndex) {
+    		if (buttonIndex==2){
+     			navigator.app.exitApp();
+    		}
+ 		}
+	</script>
+    <style>
+    	img {
+			max-width:100%;
+			height:auto;}
+    </style>
+</head>
+<body onLoad="onload()">
+
+<div data-role="page" id="page2" data-theme="a"><!--start page 2-->
+
+	<div data-role="header" style="color:white;background:linear-gradient(180deg, #38c,#40c);min-height:100%;width:100%;">
+		<h1>BALOK</h1>
+		<a id="playClip01" href="#panel-reveal-2" class="ui-btn ui-corner-all ui-shadow ui-icon-bars ui-btn-icon-left ui-btn-icon-notext">Menu</a>
+		<a id="playClip01" href="index.html" target="_self" class="ui-btn ui-shadow ui-btn-icon-left ui-icon-home ui-btn-icon-notext">Beranda</a>
+		<div data-role="navbar">
+			<ul>
+				<li><a id="playClip01" href="#page2" class="ui-btn-active ui-state-persist">Unsur</a></li>
+				<li><a id="playClip01" href="#page1">Sifat</a></li>
+				<li><a id="playClip01" href="#page3">Info</a></li>
+			</ul>
+		</div>
+	</div><!-- /header -->
+
+	<div class="ui-content" role="main">
+
+		<div id="ui-body-test" class="ui-body ui-body-a ui-corner-all" style="margin-bottom:1em;">
+		<center><img src="img/unsurbalok.gif"></center><br>
+		Unsur-unsur bangun ruang balok : <br>
+		<ol>
+			<li>Rusuk</li>
+			<li>Sisi atau bidang</li>
+			<li>Titik Sudut berderajat 90<sup>o</sup>
+			<li>Diagonal Bidang</li>
+			<li>Diagonal Ruang</li>
+			<li>Bidang Diagonal</li>
+		</ol>
+		<ul data-role="listview" data-inset="true">
+			<li><a href="balok/sudut.html" target="_self">
+			<h2>Titik Sudut</h2></a>
+			</li>
+			<li><a href="balok/diagonalbidang.html" target="_self">	
+			<h2>Diagonal Bidang</h2>
+			<p>Untuk melihat bagaimana cara mencari diagonal bidang balok, klik disini !</p></a>
+			</li>
+			<li><a href="balok/diagonalruang.html" target="_self">	
+			<h2>Diagonal Ruang</h2>
+			<p>Untuk melihat bagaimana cara mencari diagonal ruang balok, klik disini !</p></a>
+			</li>
+			<li><a href="balok/bidangdiagonal.html" target="_self">	
+			<h2>Bidang Diagonal</h2>
+			<p>Untuk melihat bagaimana cara mencari bidang diagonal sebuah balok, klik disini !</p></a>
+			</li>
+		</ul>
+		</div>
+		
+	</div><!-- /content -->
+
+<div data-role="popup" id="info2">
+	<div data-role="header" data-theme="b">
+		<h1>Info</h1>
+		<a id="playClip01" href="#" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-icon-back ui-btn-icon-left ui-btn-icon-notext">Back</a>
+		
+	</div><!-- /header -->
+	<div role="main" class="ui-content">
+		<center><h4>Aplikasi Belajar Bangun Ruang</h4></center>
+		Presented by :
+			<label class="ui-btn ui-corner-all ui-shadow ui-icon-user ui-btn-icon-left">Ima Rohimah</label>
+			<label class="ui-btn ui-corner-all ui-shadow ui-icon-location ui-btn-icon-left">UIN Sunan Gunung Djati Bandung</label>
+			<label class="ui-btn ui-corner-all ui-shadow ui-icon-phone ui-btn-icon-left">+6285659178348</label>
+			<label class="ui-btn ui-corner-all ui-shadow ui-icon-mail ui-btn-icon-left">&nbsp;</label>
+	</div><!-- /content -->
+	<div data-role="footer">
+		<h4>Copyright &copy; 2016</h4>
+	</div><!-- /footer -->
+</div><!-- /page popup -->
+
+	<div data-role="panel" id="panel-reveal-2">
+		<ul data-role="listview">
+			<li data-icon="delete"><a id="playClip02" href="#" data-rel="close">&#8678;</a></li>
+			<li data-icon="action"><a id="playClip02" href="materi.html" target="_self">Subjek Materi</a></li>
+			<li data-icon="edit"><a id="playClip02" href="quiz.html" target="_self">Latihan/Quiz</a></li>
+			<li data-icon="info"><a id="playClip02" href="#info2" data-rel="popup" data-transition="flow">Info</a></li>
+			<li data-icon="power"><a id="playClip02" onClick="showConfirm()">Keluar</a></li>
+		</ul>
+	</div>
+
+	<div data-role="footer" style="color:white;background:linear-gradient(180deg, #38c,#40c);min-height:100%;width:100%;">
+		<h4>Copyright &copy; 2016</h4>
+	</div><!-- /footer -->
+
+</div><!-- /page 2-->
+
+<div data-role="page" id="page1"><!--start page 1-->
+
+	<div data-role="header" style="color:white;background:linear-gradient(180deg, #38c,#40c);min-height:100%;width:100%;">
+		<h1>BALOK</h1>
+		<a id="playClip01" href="#panel-reveal-1" class="ui-btn ui-corner-all ui-shadow ui-icon-bars ui-btn-icon-left ui-btn-icon-notext">Menu</a>
+		<a id="playClip01" href="index.html" target="_self" class="ui-btn ui-shadow ui-btn-icon-left ui-icon-home ui-btn-icon-notext">Beranda</a>
+		<div data-role="navbar">
+			<ul>
+				<li><a id="playClip01" href="#page2">Unsur</a></li>
+				<li><a id="playClip01" href="#page1" class="ui-btn-active ui-state-persist">Sifat</a></li>
+				<li><a id="playClip01" href="#page3">Info</a></li>
+			</ul>
+		</div>
+	</div><!-- /header -->
+
+	<div class="ui-content" role="main">
+
+		<div id="ui-body-test" class="ui-body ui-body-a ui-corner-all" style="margin-bottom:1em;">
+		Adapun sifat-sifat balok yang dapat kita ketahui antara lain : <br/>
+		<ul data-role="listview" data-split-icon="eye" data-inset="true">
+			<li><a href="balok/newyork.html" target="_self">				
+			<h2>Memiliki 6 Sisi</h2>
+			<p>Balok memiliki 6 sisi yang  berbentuk persegi panjang, setiap sisi yang berhadapan memiliki ukuran yang sama.</p></a>
+			</li>
+			<li><a href="balok/buenosaires.html" target="_self">				
+			<h2>Memiliki 12 Rusuk</h2>
+			<p>Rusuk ialah ruas garis pada kubus dan balok,<br/>terdapat 12 rusuk pada balok, rusuk-rusuk yang sejajar atau yang berhadapan memiliki ukuran sama panjang.<br/></p></a>
+			</li>
+			<li><a href="balok/paris.html" target="_self">				
+			<h2>Memiliki 12 Diagonal Bidang</h2>
+			<p>Balok memiliki 12 diagonal bidang, setiap diagonal bidang pada sisi yang berhadapan memiliki ukuran sama panjang.</p></a>
+			</li>
+			<li><a href="balok/capetown.html" target="_self">				
+			<h2>Memiliki 4 Diagonal Ruang</h2>
+			<p>Balok memiliki 4 diagonal ruang yang ukurannya sama panjang.</p></a>
+			</li>
+			<li><a href="balok/sydney.html" target="_self">			
+			<h2>Memiliki 6 Bidang Diagonal</h2>
+			<p>Balok memiliki 6 buah bidang diagonal yang berbentuk persegi panjang yang memiliki ukuran yang sama.</p></a>
+			</li>
+			
+		</ul>
+		</div>
+
+	</div><!-- /content -->
+
+<div data-role="popup" id="info1">
+	<div data-role="header" data-theme="b">
+		<h1>Info</h1>
+		<a id="playClip01" href="#" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-icon-back ui-btn-icon-left ui-btn-icon-notext">Back</a>
+		
+	</div><!-- /header -->
+	<div role="main" class="ui-content">
+		<center><h4>Aplikasi Belajar Bangun Ruang</h4></center>
+		Presented by :
+			<label class="ui-btn ui-corner-all ui-shadow ui-icon-user ui-btn-icon-left">Ima Rohimah</label>
+			<label class="ui-btn ui-corner-all ui-shadow ui-icon-location ui-btn-icon-left">UIN Sunan Gunung Djati Bandung</label>
+			<label class="ui-btn ui-corner-all ui-shadow ui-icon-phone ui-btn-icon-left">+6285659178348</label>
+			<label class="ui-btn ui-corner-all ui-shadow ui-icon-mail ui-btn-icon-left">&nbsp;</label>
+	</div><!-- /content -->
+	<div data-role="footer">
+		<h4>Copyright &copy; 2016</h4>
+	</div><!-- /footer -->
+</div><!-- /page popup -->
+
+	<div data-role="panel" id="panel-reveal-1">
+		<ul data-role="listview">
+			<li data-icon="delete"><a id="playClip02" href="#" data-rel="close">&#8678;</a></li>
+			<li data-icon="action"><a id="playClip02" href="materi.html" target="_self">Subjek Materi</a></li>
+			<li data-icon="edit"><a id="playClip02" href="quiz.html" target="_self">Latihan/Quiz</a></li>
+			<li data-icon="info"><a id="playClip02" href="#info1" data-rel="popup" data-transition="flow">Info</a></li>
+			<li data-icon="power"><a id="playClip02" onClick="showConfirm()">Keluar</a></li>
+		</ul>
+	</div>
+
+	<div data-role="footer" style="color:white;background:linear-gradient(180deg, #38c,#40c);min-height:100%;width:100%;">
+		<h4>Copyright &copy; 2016</h4>
+	</div><!-- /footer -->
+
+</div><!-- /page 1-->
+
+<div data-role="page" id="page3" data-theme="a"><!--start page 3-->
+
+	<div data-role="header" style="color:white;background:linear-gradient(180deg, #38c,#40c);min-height:100%;width:100%;">
+		<h1>BALOK</h1>
+		<a id="playClip01" href="#panel-reveal-3" class="ui-btn ui-corner-all ui-shadow ui-icon-bars ui-btn-icon-left ui-btn-icon-notext">Menu</a>
+		<a id="playClip01" href="index.html" target="_self" class="ui-btn ui-shadow ui-btn-icon-left ui-icon-home ui-btn-icon-notext">Beranda</a>
+		<div data-role="navbar">
+			<ul>
+				<li><a id="playClip01" href="#page2">Unsur</a></li>
+				<li><a id="playClip01" href="#page1">Sifat</a></li>
+				<li><a id="playClip01" href="#page3" class="ui-btn-active ui-state-persist">Info</a></li>
+			</ul>
+		</div>
+	</div><!-- /header -->
+
+	<div class="ui-content" role="main">
+		<div data-role="collapsible" data-content-theme="a">
+			<h4>Pengertian</h4>
+		<p>Balok merupakan bangun ruang yang dapat terdiri dari persegi ataupun persegi panjang. Bangun tersebut sama panjang dengan dihadapannya.</p>
+		</div>
+		
+		<div id="ui-body-test" class="ui-body ui-body-a ui-corner-all" style="margin-bottom:1em;">
+		Berikut adalah rumus-rumus umum yang dapat kita ketahui mengenai balok.
+		<div data-role="collapsibleset" data-content-theme="a">
+			<div data-role="collapsible">
+				<h3>Rumus Luas Permukaan</h3>
+			<p>	L = 2(pl) + 2(pt) + 2(lt)<br/>
+				L = 2(p.l+p.t+l.t)  </p>
+			</div>
+			<div data-role="collapsible">
+				<h3>Rumus Volume</h3>
+			<p>V =  p x l x t </p>
+			</div>
+			<div data-role="collapsible">
+				<h3>Rumus Keliling</h3>
+			<p>K =  4(p+l+t)</p>
+			</div>
+		</div>
+		</div>
+		
+	</div><!-- /content -->
+
+<div data-role="popup" id="info3">
+	<div data-role="header" data-theme="b">
+		<h1>Info</h1>
+		<a id="playClip01" href="#" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-icon-back ui-btn-icon-left ui-btn-icon-notext">Back</a>
+		
+	</div><!-- /header -->
+	<div role="main" class="ui-content">
+		<center><h4>Aplikasi Belajar Bangun Ruang</h4></center>
+		Presented by :
+			<label class="ui-btn ui-corner-all ui-shadow ui-icon-user ui-btn-icon-left">Ima Rohimah</label>
+			<label class="ui-btn ui-corner-all ui-shadow ui-icon-location ui-btn-icon-left">UIN Sunan Gunung Djati Bandung</label>
+			<label class="ui-btn ui-corner-all ui-shadow ui-icon-phone ui-btn-icon-left">+6285659178348</label>
+			<label class="ui-btn ui-corner-all ui-shadow ui-icon-mail ui-btn-icon-left">&nbsp;</label>
+	</div><!-- /content -->
+	<div data-role="footer">
+		<h4>Copyright &copy; 2016</h4>
+	</div><!-- /footer -->
+</div><!-- /page popup -->
+
+	<div data-role="panel" id="panel-reveal-3">
+		<ul data-role="listview">
+			<li data-icon="delete"><a id="playClip02" href="#" data-rel="close">&#8678;</a></li>
+			<li data-icon="action"><a id="playClip02" href="materi.html" target="_self">Subjek Materi</a></li>
+			<li data-icon="edit"><a id="playClip02" href="quiz.html" target="_self">Latihan/Quiz</a></li>
+			<li data-icon="info"><a id="playClip02" href="#info3" data-rel="popup" data-transition="flow">Info</a></li>
+			<li data-icon="power"><a id="playClip02" onClick="showConfirm()">Keluar</a></li>
+		</ul>
+	</div>
+
+	<div data-role="footer" style="color:white;background:linear-gradient(180deg, #38c,#40c);min-height:100%;width:100%;">
+		<h4>Copyright &copy; 2016</h4>
+	</div><!-- /footer -->
+
+</div><!-- /page 3-->
+
+</body>
+</html>
